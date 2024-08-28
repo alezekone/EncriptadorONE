@@ -5,6 +5,10 @@ let clipboard = ""
 
 function btnEncriptarClick(){
     textoSalida.value = encriptar(textoEntrada.value);
+    if (textoEntrada.value.length>0) {
+        document.querySelector("#imagenMuneco").setAttribute("hidden","true");
+        document.querySelector(".seccion__salida__nomessage").setAttribute("hidden","true");
+    }
     textoEntrada.value="";
     /* Debo ocultar la imagen del muñeco. */
 }
