@@ -22,10 +22,18 @@ body{
 
 main {
     display: flex;
+    margin-left: 80px;
+}
+
+.seccion_entrada_botones{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .seccion__salida {
     background-color: var(--color-terciario);
     border-radius: 32px;
+    box-sizing: border-box;
 }
 
 .advertencia {
@@ -35,22 +43,45 @@ main {
 /*********** Text Areas ************/
 
 .text-area {
+    border: none;
+}
 
+#areaDeTextoDeEntrada{
+    background-color: var(--color-primario);
+    width: 80%;
+    height: 80%;
+    box-sizing: border-box;
+    margin:5%;
+    /*text-transform: lowercase;*/
+    border: none;
 }
 
 #areaDeTextoDeEntrada::placeholder {
     font-family: var(--fuente-inter);
     font-optical-sizing: auto;
-    font-size: 16px;
+    font-size: 32px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    color: var(--color-secundario)
+    color: var(--color-secundario);
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
 }
 
 #areaDeTextoDeSalida {
+    font-family: var(--fuente-inter);
+    font-optical-sizing: auto;
+    font-size: 32px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-secundario);
     padding: 5%;
-    width:auto;
+    width: 80%;
+    height: 80%;
+    justify-content: center;
+    box-sizing: border-box;
+    margin:5%;
     /*background-color: red;*/
 }
 
@@ -95,10 +126,12 @@ main {
     main {
         display: flex;
         flex-direction:row;
+        gap: 10px;
     }
     .botones_ppales {
         display: flex;
         flex-direction:row;
+        gap: 10px;
     }
 }
 
@@ -112,6 +145,7 @@ main {
     .botones_ppales {
         display: flex;
         flex-direction:row;
+        gap: 10px;
     }
 }
 
@@ -125,5 +159,6 @@ main {
     .botones_ppales {
         display: flex;
         flex-direction: column;
+        gap: 10px;
     }
 }
