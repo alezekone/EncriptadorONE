@@ -4,36 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador ONE</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header></header>
-    <main>
-        <section class="section__logo">
-            <img class="section__logo_imagen" src="./assets/Logo.png" alt="Logo de Alura">
-        </section>
+    <header>
+        <img class="section__logo_imagen" src="./assets/Logo.png" alt="Logo de Alura">
+    </header>
+    <main class="main__container">
         <section class="section__entrada">
-            <input type="text" name="entrada" id="entrada">
+            <textarea name="entrada" class="text-area" id="areaDeTextoDeEntrada" cols="20" rows="30" placeholder="Ingrese el texto aquí"></textarea>
             <div class="section_entrada_botones">
-                <img src="./assets/bi_exclamation-circle-fill.png" alt="Signo de exclamacion">
-                <p>Solo letras minúsculas y sin acentos</p>
-                <div class="botones">
-                    <button type="button" id="encriptar">Encriptar</button>
-                    <button type="button" id="desencriptar">Desencriptar</button>
+                <div class="advertencia">
+                    <img src="./assets/bi_exclamation-circle-fill.png" alt="Signo de exclamacion">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="botones botones_ppales">
+                    <button type="button" class="button" id="btnEncriptar" onclick="btnEncriptarClick()">Encriptar</button>
+                    <button type="button" class="button" id="btnDesencriptar" onclick="btnDesencriptarClick()">Desencriptar</button>
                 </div>
             </div>
         </section>
-        <section class="section__salida">
-            <div class="section__salida__texto"></div>
+        <section class="seccion__salida">
+            <div class="seccion__salida__texto">
+                <textarea name="salida" class="text-area" id="areaDeTextoDeSalida" cols="20" rows="30"></textarea>
+            </div>
             <img src="./assets/Muñeco.png" alt="Muñeco con lupa">
             <div>
                 <h2>Ningún mensaje fue encontrado</h2>
                 <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
             </div>
-
+            <button type="button" class="botones" id="btnCopiar" onclick="btnCopiarClick()">Copiar</button>
         </section>
     </main>
     <footer></footer>
-    <script src="app.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>

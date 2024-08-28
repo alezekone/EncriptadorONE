@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --color-primario: #F3F5FC;   /* Background general*/
+    --color-secundario: #0A3871;  /* Botón encriptar*/
+    --color-terciario: #FFFFFF; /* Background del cuadro de resultado*/
+    --color-cuarto: #D8DFE8;     /* Botón desencriptar*/
+
+    --fuente-inter: 'Inter', sans-serif; 
+}
+
+* {
+    padding: 0;
+    margin:0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+main {
+    display: flex;
+}
+.seccion__salida {
+    background-color: var(--color-terciario);
+    border-radius: 32px;
+}
+
+.advertencia {
+    display:flex;
+}
+
+/*********** Text Areas ************/
+
+.text-area {
+
+}
+
+#areaDeTextoDeEntrada::placeholder {
+    font-family: var(--fuente-inter);
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: var(--color-secundario)
+}
+
+#areaDeTextoDeSalida {
+    padding: 5%;
+    width:auto;
+    /*background-color: red;*/
+}
+
+/********* BOTONES *********/
+
+.button {
+  font-family: var(--fuente-inter);
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+#btnEncriptar{
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+    border-radius: 24px;
+    width: 328px;
+    padding: 24px;
+}
+#btnDesencriptar{
+    background-color: var(--color-cuarto);
+    border: 1px solid var(--color-secundario);
+    border-radius: 24px;
+    width: 328px;
+    padding: 24px;
+}
+
+#btnCopiar{
+    background-color: var(--color-cuarto);
+    border: 1px solid var(--color-secundario);
+    border-radius: 24px;
+    width: 328px;
+    padding: 24px;
+}
+
+/********* Responsive **************/
+
+@media (min-width: 769px) {
+    /*Estoy en una PC*/
+    main {
+        display: flex;
+        flex-direction:row;
+    }
+    .botones_ppales {
+        display: flex;
+        flex-direction:row;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+    /*Estoy en una tablet*/
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botones_ppales {
+        display: flex;
+        flex-direction:row;
+    }
+}
+
+@media (max-width: 375px) {
+    /*Estoy en un celu*/
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botones_ppales {
+        display: flex;
+        flex-direction: column;
+    }
+}
